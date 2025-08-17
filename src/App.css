@@ -1,0 +1,185 @@
+.layout-container {
+  @apply relative break-keep border border-blue-500 md:border-green-500 xl:border-red-500;
+
+  .inner {
+    @apply px-[1rem] md:px-[4rem] 2xl:px-[16rem];
+  }
+
+  .btn-start {
+    @apply px-[1.5rem] text-blue-800 text-[1rem] font-bold border border-blue-200 bg-blue-50 rounded-full;
+  }
+
+  header {
+    @apply flex justify-between items-center h-[5rem] px-[8svw] sticky top-0 bg-background/50 shadow-sm z-50;
+  }
+
+  main {
+    .main-container {
+      @apply flex flex-col;
+
+      section {
+        @apply flex flex-col justify-center min-h-[calc(100svh-5rem)] py-[2rem] xl:py-[4rem] text-center;
+      }
+
+      h2 {
+        @apply text-[3rem] leading-[1.25] font-bold;
+      }
+
+      h3 {
+        @apply inline-flex py-[1rem] text-[2rem] leading-[1.25];
+      }
+
+      .description {
+        @apply py-[2rem] text-2xl text-gray-600;
+      }
+
+      .section1 {
+        h2 {
+          @apply text-[3.5rem] leading-[1.125] xl:text-[4.5rem] xl:leading-[1.25];
+        }
+
+        .text-gradient {
+          font-style: normal;
+          -webkit-text-fill-color: transparent;
+          -webkit-background-clip: text;
+          background: -webkit-radial-gradient(circle, #7182ff 0, #3cff52 100%);
+          background: radial-gradient(circle, #7182ff 0, #3cff52 100%);
+          background-clip: text;
+          background-size: 200%;
+          animation: textShine 1s ease-in-out infinite alternate;
+        }
+
+        p {
+          @apply xl:mx-[10svw] text-xl text-left;
+
+          &.text1 {
+            @apply flex items-center my-[10svh] text-center;
+
+            span.bar {
+              @apply inline-flex w-16 h-[1px] mx-[1rem] bg-gray-500;
+            }
+          }
+
+          &.text2 {
+            @apply text-blue-900 font-bold;
+          }
+
+          &.text3 {
+            @apply text-base py-3 px-6 rounded-2xl bg-blue-50 border border-gray-200;
+          }
+        }
+
+        .prompt-wrap {
+          @apply flex xl:mx-[10svw] h-40 p-4 my-[1rem] relative border-4 rounded-[2rem] border-blue-500 bg-white shadow-lg;
+
+          textarea {
+            @apply w-full h-full border-none text-lg;
+          }
+
+          button {
+            @apply px-8 text-lg font-bold absolute bottom-6 right-6 rounded-full;
+          }
+        }
+      }
+
+      .section2 {
+        .box {
+          @apply w-full h-[60svh] bg-slate-500 rounded-3xl p-4;
+        }
+      }
+
+      .section3 {
+        .features-wrap {
+          @apply pt-[6rem];
+
+          dl {
+            @apply grid grid-cols-1 xl:grid-cols-2 gap-[4rem] mt-[6svh];
+
+            dt {
+              @apply h-80 border border-gray-200 bg-gray-50 rounded-3xl;
+            }
+
+            dd {
+              @apply flex-1 text-left;
+
+              .text1 {
+                @apply mt-[1rem] text-lg;
+              }
+            }
+          }
+        }
+      }
+
+      .section4 {
+        .audiences-wrap {
+          @apply grid grid-cols-1 xl:grid-cols-3 pt-[6rem] gap-12 text-left;
+
+          .audiences-item {
+            @apply py-[1rem] px-[2rem] rounded-[2rem] bg-blue-50;
+
+            .audiences-item__title {
+              @apply text-indigo-800 leading-[1.25];
+            }
+
+            .audiences-item__content {
+              @apply px-0 py-[1rem];
+            }
+          }
+        }
+      }
+
+      .section5 {
+        .faq-list {
+          @apply flex flex-col gap-[1rem] pt-[6rem];
+
+          .faq-list-item {
+            @apply border border-gray-200 rounded-xl;
+          }
+
+          .faq-list-item__trigger {
+            @apply w-full py-[1rem] px-[2rem] text-xl text-left;
+            background: url('./assets/chevron-down.svg') no-repeat 98% 1.25rem;
+
+            &[data-state="open"] {
+              background: url('./assets/chevron-up.svg') no-repeat 98% center;
+            }
+          }
+
+          .faq-list-item__content {
+            @apply text-lg border-t border-gray-200 bg-slate-50 text-left opacity-0;
+
+            &[data-state="open"] {
+              @apply py-[1rem] px-[2rem] opacity-100;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    @apply xl:px-[4rem] text-gray-500 text-sm;
+
+    ul {
+      @apply flex justify-between items-end w-full pt-4;
+    }
+  }
+}
+
+@keyframes textShine {
+  0% {
+    background-position: 0 50%;
+  }
+
+  15% {
+    background-position: 0 50%;
+  }
+
+  85% {
+    background-position: 100% 100%;
+  }
+
+  100% {
+    background-position: 100% 100%;
+  }
+}
