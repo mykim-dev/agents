@@ -1,5 +1,5 @@
 .layout-container {
-  @apply relative break-keep border border-blue-500 md:border-green-500 xl:border-red-500;
+  @apply relative break-keep;
 
   .inner {
     @apply px-[1rem] md:px-[4rem] 2xl:px-[16rem];
@@ -18,7 +18,7 @@
       @apply flex flex-col;
 
       section {
-        @apply flex flex-col justify-center min-h-[calc(100svh-5rem)] py-[2rem] xl:py-[4rem] text-center;
+        @apply flex flex-col xl:justify-center xl:min-h-[calc(100svh-5rem)] py-[3rem] xl:py-[6rem] text-center;
       }
 
       h2 {
@@ -90,7 +90,7 @@
 
       .section3 {
         .features-wrap {
-          @apply pt-[6rem];
+          @apply xl:pt-[6rem];
 
           dl {
             @apply grid grid-cols-1 xl:grid-cols-2 gap-[4rem] mt-[6svh];
@@ -112,10 +112,10 @@
 
       .section4 {
         .audiences-wrap {
-          @apply grid grid-cols-1 xl:grid-cols-3 pt-[6rem] gap-12 text-left;
+          @apply grid grid-cols-1 xl:grid-cols-3 xl:pt-[6rem] gap-[1rem] xl:gap-[2rem] text-left;
 
           .audiences-item {
-            @apply py-[1rem] px-[2rem] rounded-[2rem] bg-blue-50;
+            @apply px-[2rem] py-[1rem] rounded-[2rem] bg-blue-50;
 
             .audiences-item__title {
               @apply text-indigo-800 leading-[1.25];
@@ -130,7 +130,7 @@
 
       .section5 {
         .faq-list {
-          @apply flex flex-col gap-[1rem] pt-[6rem];
+          @apply flex flex-col gap-[1rem] xl:pt-[6rem];
 
           .faq-list-item {
             @apply border border-gray-200 rounded-xl;
@@ -141,7 +141,7 @@
             background: url('./assets/chevron-down.svg') no-repeat 98% 1.25rem;
 
             &[data-state="open"] {
-              background: url('./assets/chevron-up.svg') no-repeat 98% center;
+              background: url('./assets/chevron-up.svg') no-repeat 98% 1.25rem;
             }
           }
 
