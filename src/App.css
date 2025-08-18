@@ -18,7 +18,7 @@
       @apply flex flex-col;
 
       section {
-        @apply flex flex-col xl:justify-center xl:min-h-[calc(100svh-5rem)] py-[3rem] xl:py-[6rem] text-center;
+        @apply flex flex-col xl:justify-center xl:min-h-[calc(100svh-5rem)] py-[4rem] xl:py-[6rem] text-center;
       }
 
       h2 {

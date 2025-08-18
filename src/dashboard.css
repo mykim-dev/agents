@@ -24,131 +24,117 @@
     }
 
     .dashboard-contents {
-      @apply flex min-w-[960px] h-[calc(100svh-3rem)] bg-slate-50 overflow-hidden;
+      @apply h-[calc(100svh-3rem)] bg-slate-50;
       
 
       &.is-detail-collapsed {
         .chat-wrap {
-          @apply px-[10svw];
+          @apply w-[100%] px-[10svw];
+
+          .prompt-wrap {
+            @apply left-[10svw] right-[10svw];
+          }
         }
 
         .detail-wrap {
-          @apply flex-initial w-0 p-0 border-0 opacity-0 overflow-hidden;          
+          @apply w-0 p-0 border-0 opacity-0 overflow-hidden;          
         }
       }
     }
-  }
-  footer {
   }
 }
 
 .chat-wrap {
-  @apply flex-1 grid grid-rows-[3rem_1fr_10rem] transition-all ease-in-out duration-200;
-
-  .chat-header {
-    @apply h-[3rem] pl-[1rem] flex justify-between items-center;
-
-    h2 {
-      @apply text-base font-bold;
-    }
-  }
-
-  .chat-body {
-    @apply h-[calc(100svh-16rem)] px-[1rem] overflow-y-auto;
+  @apply w-[50%] p-[1rem] relative transition-all ease-in-out duration-200; 
     
-    .chat-list {
-      @apply flex flex-col gap-[1rem];
+  .chat-list {
+    @apply flex flex-col gap-[1rem] pt-[1rem] pb-[12rem];
 
-      dl.chat-item {
-        @apply flex flex-col gap-[0.5rem];
+    dl.chat-item {
+      @apply flex flex-col gap-[0.5rem];
 
-        dt {
-          @apply flex justify-between items-center;
-        }
-        dd {
-        }
-
-        a {
-          @apply underline;
-        }
-
-        &.me {
-          .chat-message-group {
-            @apply p-[1rem] ml-[10svw] border border-gray-200 rounded-2xl rounded-br-none bg-background;
-          }
-        }
-
-        .chat-time {
-          @apply flex justify-end text-xs text-gray-500;
-        }
-        
-        .chat-message-group {
-          @apply flex flex-col gap-[1rem];
-          
-          .chat-message {            
-            &.message-text {
-            }
-  
-            &.message-ol {
-              list-style-type: decimal;
-              list-style-position: inside;
-              padding-left: 0.5rem;
-              line-height: 2;
-            }
-  
-            &.message-collapsible {
-              @apply relative;
-              &:after {
-                @apply content-[''] block w-[1px] absolute top-[1rem] -bottom-[1rem] left-[0.45rem] border-l border-dashed border-gray-300;
-              }
-              .message-collapsible-trigger {
-                @apply flex items-center gap-[0.5rem];
-              }
-
-              .message-collapsible-content {
-                @apply mx-[1.5rem] my-[0.5rem] text-sm;
-              }
-            }
-
-            &.message-file {
-              @apply flex gap-[0.5rem] my-[0.5rem] h-auto max-w-[100%] py-1 px-[1rem] text-foreground/50 justify-start border border-gray-200 bg-gray-100 rounded-full hover:bg-gray-100/50;
-
-              .file-name {
-                @apply inline-block text-sm overflow-hidden text-ellipsis;
-              }
-
-              .file-type {
-                @apply p-[2px] text-foreground border border-gray-300 rounded-sm;
-
-                &.type-md {}
-                &.type-code {}
-              }
-            }
-          }
-        }        
+      dt {
+        @apply flex justify-between items-center;
       }
-    }
+      dd {
+      }
 
-    .toggle-detail {
-      @apply w-16 h-12 border border-gray-200 bg-slate-100 fixed bottom-[9.5rem] rounded-xl shadow-md;
+      a {
+        @apply underline;
+      }
+
+      &.me {
+        .chat-message-group {
+          @apply p-[1rem] ml-[10svw] border border-gray-200 rounded-2xl rounded-br-none bg-background;
+        }
+      }
+
+      .chat-time {
+        @apply flex justify-end text-xs text-gray-500;
+      }
+      
+      .chat-message-group {
+        @apply flex flex-col gap-[1rem];
+        
+        .chat-message {            
+          &.message-text {
+          }
+
+          &.message-ol {
+            list-style-type: decimal;
+            list-style-position: inside;
+            padding-left: 0.5rem;
+            line-height: 2;
+          }
+
+          &.message-collapsible {
+            @apply relative;
+            &:after {
+              @apply content-[''] block w-[1px] absolute top-[1rem] -bottom-[1rem] left-[0.45rem] border-l border-dashed border-gray-300;
+            }
+            .message-collapsible-trigger {
+              @apply flex items-center gap-[0.5rem];
+            }
+
+            .message-collapsible-content {
+              @apply mx-[1.5rem] my-[0.5rem] text-sm;
+            }
+          }
+
+          &.message-file {
+            @apply flex gap-[0.5rem] my-[0.5rem] h-auto max-w-[100%] py-1 px-[1rem] text-foreground/50 justify-start border border-gray-200 bg-gray-100 rounded-full hover:bg-gray-100/50;
+
+            .file-name {
+              @apply inline-block text-sm overflow-hidden text-ellipsis;
+            }
+
+            .file-type {
+              @apply p-[2px] text-foreground border border-gray-300 rounded-sm;
+
+              &.type-md {}
+              &.type-code {}
+            }
+          }
+        }
+      }        
     }
   }
 
-  .chat-footer {
-    @apply h-[10rem] p-[1rem] flex items-center justify-center;
+  .toggle-detail {
+    @apply w-16 h-12 border border-gray-200 bg-slate-100 fixed bottom-[9.5rem] rounded-xl shadow-md;
+  }
 
-    .prompt-wrap {
-      @apply w-full;
+  .prompt-wrap {
+    @apply h-[10rem] absolute bottom-[1rem] left-[1rem] right-[1rem];
 
-      button {
-        @apply px-6;
-      }
+    button {
+      @apply px-6;
     }
   }
 }
 
 .detail-wrap {
-  @apply flex-1 grid grid-rows-[3rem_1fr] my-[1rem] mr-[1rem] border border-gray-200 bg-background rounded-xl opacity-100 transition-all ease-in-out duration-200;
+  @apply w-[50%] flex-1 grid grid-rows-[3rem_1fr] border border-gray-200 bg-background rounded-xl opacity-100 fixed top-[4rem] right-[1rem] bottom-[1rem] transition-all ease-in-out duration-200;
 
   .detail-header {
     @apply h-[3rem] px-[1rem] flex justify-between items-center shadow-sm;
@@ -159,7 +145,6 @@
   }
 
   .detail-body {
-    @apply h-[1fr];
   }
 }
 
