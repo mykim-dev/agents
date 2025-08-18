@@ -1,4 +1,4 @@
-.layout-container {
+.layout-app {
   @apply relative break-keep;
 
   .inner {
@@ -70,14 +70,10 @@
         }
 
         .prompt-wrap {
-          @apply flex xl:mx-[10svw] h-40 p-4 my-[1rem] relative border-4 rounded-[2rem] border-blue-500 bg-white shadow-lg;
-
-          textarea {
-            @apply w-full h-full border-none text-lg;
-          }
+          @apply h-40 my-[1rem] xl:mx-[10svw];
 
           button {
-            @apply px-8 text-lg font-bold absolute bottom-6 right-6 rounded-full;
+            @apply px-8 text-lg;
           }
         }
       }
@@ -163,6 +159,18 @@
     ul {
       @apply flex justify-between items-end w-full pt-4;
     }
+  }
+}
+
+.prompt-wrap {
+  @apply flex p-4 relative border-4 rounded-[2rem] border-blue-500 bg-white shadow-lg;
+
+  textarea {
+    @apply w-full h-full border-none text-lg;
+  }
+
+  button {
+    @apply font-bold absolute bottom-6 right-6 rounded-full;
   }
 }
 

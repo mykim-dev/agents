@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Button } from './components/ui/button'
 import { Textarea } from './components/ui/textarea'
 import { Card, CardContent, CardTitle } from './components/ui/card'
@@ -8,6 +9,7 @@ import './App.css'
 
 function App() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+  const navigate = useNavigate();
 
   const featuresData: { title: string; text: string }[] = [
     {
@@ -78,12 +80,12 @@ function App() {
   };
 
   return (
-    <div className="layout-container">
+    <div className="layout-app">
       <header>
         <h1><a href="/">CALS Agents</a></h1>
         <div className="flex items-center gap-4">
           <Button variant="ghost" size="sm">로그인</Button>
-          <Button variant="default" className="btn-start">무료 시작하기</Button>
+          <Button variant="default" className="btn-start" onClick={() => navigate(import.meta.env.BASE_URL + 'dashboard')}>무료 시작하기</Button>
         </div>
       </header>
       <main>
@@ -96,7 +98,7 @@ function App() {
               <p className="text2">에이전트 팀이 대기 중입니다. 아이디어를 입력하세요.</p>
               <div className="prompt-wrap">
                 <Textarea placeholder="만들고 싶은 서비스를 입력해 보세요." />
-                <Button variant="default">에이전트 호출</Button>
+                <Button variant="default" size="lg">에이전트 호출</Button>
               </div>
               <p className="text3">
                 100가지 제품의 입고, 출고, 재고 관리를 할 수 있는 물류 관리 시스템을 만들어줘.
@@ -166,7 +168,7 @@ function App() {
                 CALSAgents와 함께라면 앱 생성부터 운영까지 문제 없습니다.
               </p>
               <div className="flex justify-center">
-                <Button variant="default" className="btn-start">무료 시작하기</Button>
+                <Button variant="default" className="btn-start" onClick={() => navigate(import.meta.env.BASE_URL + 'dashboard')}>무료 시작하기</Button>
               </div>
             </div>
           </section>
