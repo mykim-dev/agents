@@ -15,7 +15,7 @@ function Dashboard() {
 	return (
 		<div className="layout-dashboard">
 			<header>
-				<Button variant="ghost" size="icon" className="w-[3rem] h-[3rem]" onClick={() => navigate(import.meta.env.BASE_URL + '/')}><ArrowLeft aria-hidden="true" size={16} /></Button>
+				<Button variant="ghost" size="icon" className="w-[3rem] h-[3rem]" onClick={() => navigate(import.meta.env.BASE_URL + 'projects')}><ArrowLeft aria-hidden="true" size={16} /></Button>
 				<h1>Agent Studio</h1>
 				<div className="header-actions">
 					<Button variant="ghost" size="icon">

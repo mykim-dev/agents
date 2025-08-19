@@ -1,0 +1,47 @@
+.layout-projects {
+  header {
+    @apply flex items-center h-[3rem] border-b border-gray-200;
+
+    h1 {
+      @apply flex-1 px-[1rem] text-base font-bold;
+    }
+
+    .header-actions {
+      @apply flex items-center gap-[0.5rem] pr-[1rem];
+    }
+  }
+
+  main {
+    .projects-scroll {
+      @apply h-[calc(100svh-3rem)];
+    }
+
+    .projects-wrap {
+      @apply p-[3rem];
+    }
+
+    .projects-list {
+      @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[2rem];
+    }
+
+    .card-item {
+      @apply border border-gray-200 rounded-xl;
+
+      .card-item-title {
+        @apply p-[1rem] text-xl;
+      }
+
+      .card-item-description {
+        @apply flex justify-end px-[1rem];
+      }
+
+      .card-item-content {
+        @apply flex justify-end p-[1rem] gap-[1rem];
+
+        button {
+          @apply w-[6rem] h-[6rem];
+        }
+      }
+    }
+  }
+}

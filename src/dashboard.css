@@ -52,7 +52,7 @@
 
       &.is-detail-full {
         .chat-wrap {
-          @apply w-0 opacity-0 overflow-hidden;
+          @apply w-0 h-0 opacity-0 overflow-hidden;
         }
 
         .toggle-detail {
@@ -64,7 +64,7 @@
         }
 
         .detail-wrap {
-          @apply w-[calc(100%-5rem)] left-[4rem] right-[1rem];
+          @apply w-[calc(100%-5rem)];
         }
       }
     }
@@ -72,7 +72,7 @@
 }
 
 .chat-wrap {
-  @apply w-[calc(50%-2rem)] min-h-full p-[2rem] pb-[18rem] relative transition-all ease-in-out duration-200;
+  @apply w-[50%] min-h-full p-[2rem] pb-[18rem] relative transition-all ease-in-out duration-200;
 
   .chat-list {
     @apply flex flex-col gap-[1rem];
@@ -155,7 +155,7 @@
 }
 
 .detail-wrap {
-  @apply w-[calc(50%-1rem)] flex-1 grid grid-rows-[3rem_1fr] border border-gray-200 bg-background rounded-xl opacity-100 fixed top-[4rem] right-[1rem] bottom-[1rem] transition-all ease-in-out duration-200;
+  @apply w-[calc(50%-3rem)] grid grid-rows-[3rem_1fr] border border-gray-200 bg-background rounded-xl opacity-100 fixed top-[4rem] right-[1rem] bottom-[1rem] transition-all ease-in-out duration-200;
 
   .detail-header {
     @apply h-[3rem] px-[1rem] flex justify-between items-center shadow-sm;

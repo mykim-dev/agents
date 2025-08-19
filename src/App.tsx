@@ -101,7 +101,7 @@ function App() {
                 <Button variant="default" size="lg">에이전트 호출</Button>
               </div>
               <p className="text3">
-                100가지 제품의 입고, 출고, 재고 관리를 할 수 있는 물류 관리 시스템을 만들어줘.
+                <span>100가지 제품의 입고, 출고, 재고 관리를 할 수 있는 물류 관리 시스템을 만들어줘.</span>
               </p>
             </div>
           </section>
@@ -167,8 +167,8 @@ function App() {
                 아이디어가 아직 구체적이지 않아도, 개발 지식이 없어도 <br />
                 CALSAgents와 함께라면 앱 생성부터 운영까지 문제 없습니다.
               </p>
-              <div className="flex justify-center">
-                <Button variant="default" className="btn-start" onClick={() => navigate(import.meta.env.BASE_URL + 'dashboard')}>무료 시작하기</Button>
+              <div className="flex justify-center py-4">
+                <Button variant="default" size="lg" className="btn-start" onClick={() => navigate(import.meta.env.BASE_URL + 'dashboard')}>무료 시작하기</Button>
               </div>
             </div>
           </section>

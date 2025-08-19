@@ -6,7 +6,7 @@
   }
 
   .btn-start {
-    @apply px-[1.5rem] text-blue-800 text-[1rem] font-bold border border-blue-200 bg-blue-50 rounded-full;
+    @apply px-[2rem] text-blue-800 text-[1rem] font-bold border border-blue-200 bg-blue-50 rounded-full;
   }
 
   header {
@@ -53,7 +53,7 @@
           @apply xl:mx-[10svw] text-xl text-left;
 
           &.text1 {
-            @apply flex items-center my-[10svh] text-center;
+            @apply flex justify-center items-center mt-[6svh] mb-[1rem] text-center;
 
             span.bar {
               @apply inline-flex w-16 h-[1px] mx-[1rem] bg-gray-500;
@@ -61,16 +61,18 @@
           }
 
           &.text2 {
-            @apply text-blue-900 font-bold;
+            @apply mt-[16svh] mb-[1rem] text-blue-900 font-bold;
           }
 
           &.text3 {
-            @apply text-base py-3 px-6 rounded-2xl bg-blue-50 border border-gray-200;
+            span {
+              @apply inline-flex text-base mt-[1rem] py-2 px-4 rounded-2xl bg-blue-50 border border-gray-200;
+            }
           }
         }
 
         .prompt-wrap {
-          @apply h-40 my-[1rem] xl:mx-[10svw];
+          @apply h-40 xl:mx-[10svw] relative right-0 bottom-0 left-0;
 
           button {
             @apply px-8 text-lg;
@@ -148,6 +150,12 @@
               @apply py-[1rem] px-[2rem] opacity-100;
             }
           }
+        }
+      }
+
+      .section6 {
+        .btn-start {
+          @apply py-[2rem] px-[4rem] text-xl;
         }
       }
     }
