@@ -1,47 +1,57 @@
-.layout-projects {
-  header {
-    @apply flex items-center h-[3rem] border-b border-gray-200;
+.projects-wrap {
+  @apply px-[10svw] py-[4rem];
 
-    h1 {
-      @apply flex-1 px-[1rem] text-base font-bold;
-    }
-
-    .header-actions {
-      @apply flex items-center gap-[0.5rem] pr-[1rem];
-    }
+  .projects-scroll {
+    @apply h-[calc(100svh-3rem)];
   }
 
-  main {
-    .projects-scroll {
-      @apply h-[calc(100svh-3rem)];
+  .projects-list {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[1rem];
+  }
+
+  .card-item {
+    @apply flex flex-col justify-between h-[10rem] p-[1rem] border border-gray-200 rounded-xl;
+
+    .card-item-title {
+      @apply text-base truncate;
     }
 
-    .projects-wrap {
-      @apply p-[3rem];
-    }
+    .card-item-description {
+      /* @apply px-[1rem]; */
 
-    .projects-list {
-      @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[2rem];
-    }
+      .project-state {
+        @apply flex justify-between items-center;
 
-    .card-item {
-      @apply border border-gray-200 rounded-xl;
+        .project-state-text {
+          @apply px-[1rem] py-1 border border-gray-200 rounded-full;
+        }
 
-      .card-item-title {
-        @apply p-[1rem] text-xl;
-      }
-
-      .card-item-description {
-        @apply flex justify-end px-[1rem];
-      }
-
-      .card-item-content {
-        @apply flex justify-end p-[1rem] gap-[1rem];
-
-        button {
-          @apply w-[6rem] h-[6rem];
+        .project-state-time {
+          @apply text-[0.75rem] text-gray-500;
         }
       }
+    }
+
+    .card-item-content {
+      @apply p-0;
+
+      .card-item-actions {
+        @apply flex justify-end;
+
+        button {
+          @apply flex items-center text-slate-500 gap-0 transition-[gap] duration-300;
+          
+          span {
+            @apply inline-flex max-w-0 opacity-0 overflow-hidden whitespace-nowrap transition-all duration-300;
+          }
+
+          &:hover { @apply gap-[0.5rem]; }
+
+          &:hover span {
+            @apply max-w-[12rem] opacity-100;
+          }
+        }
+      }        
     }
   }
 }

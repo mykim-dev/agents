@@ -1,4 +1,4 @@
-.layout-app {
+.layout-container {
   @apply relative break-keep;
 
   .inner {
@@ -120,7 +120,7 @@
             }
 
             .audiences-item__content {
-              @apply px-0 py-[1rem];
+              @apply px-0 py-[1rem] text-background;
             }
           }
         }
@@ -159,6 +159,9 @@
         }
       }
     }
+
+    .sub-container {
+    }
   }
 
   footer {
@@ -171,7 +174,7 @@
 }
 
 .prompt-wrap {
-  @apply flex p-4 relative border-4 rounded-[2rem] border-blue-500 bg-white shadow-lg;
+  @apply flex p-4 relative border-4 rounded-[2rem] border-blue-500 bg-background shadow-lg;
 
   textarea {
     @apply w-full h-full border-none text-lg;

@@ -80,7 +80,7 @@ function App() {
   };
 
   return (
-    <div className="layout-app">
+    <div className="layout-container">
       <header>
         <h1><a href="/">CALS Agents</a></h1>
         <div className="flex items-center gap-4">
